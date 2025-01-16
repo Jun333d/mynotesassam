@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            width: 100%;
+            background: linear-gradient(90deg, #f14a4a, #2196f3);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: right;
+            background: white;
+            padding: 15px 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #444;
+            font-weight: bold;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        nav a:visited {
+            color: #444; /* Prevent color change after visiting */
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background: #4caf50;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        footer {
+            background: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+
+        .dropdown {
+            margin: 20px 0;
+        }
+
+        .dropdown button {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown button:focus {
+            outline: none;
+        }
+
+        .dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #444;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background: #f1f1f1;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 450px) {
+            section {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div style="display: flex; align-items: center;">
+                <img src="https://i.imgur.com/w49mLyC.png" style="height: 40px; margin-right: 10px;"> <!-- https://i.imgur.com/w49mLyC.png -->
+                <h2 style="margin: 0;">Jick's</h2>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section>
+        <h2>Subjects</h2>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('math-dropdown')">Math</button>
+            <div id="math-dropdown" class="dropdown-content">
+                <a href="#algebra">Algebra</a>
+                <a href="#geometry">Geometry</a>
+                <a href="#calculus">Calculus</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('science-dropdown')">Science</button>
+            <div id="science-dropdown" class="dropdown-content">
+                <a href="#physics">Physics</a>
+                <a href="#chemistry">Chemistry</a>
+                <a href="#biology">Biology</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('english-dropdown')">English</button>
+            <div id="english-dropdown" class="dropdown-content">
+                <a href="#literature">Literature</a>
+                <a href="#grammar">Grammar</a>
+                <a href="#composition">Composition</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('assamese-dropdown')">Assamese</button>
+            <div id="assamese-dropdown" class="dropdown-content">
+                <a href="#literature">Literature</a>
+                <a href="#grammar">Grammar</a>
+                <a href="#composition">Composition</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('hindi-dropdown')">Hindi</button>
+            <div id="hindi-dropdown" class="dropdown-content">
+                <a href="#literature">Literature</a>
+                <a href="#grammar">Grammar</a>
+                <a href="#composition">Composition</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('advanced-maths-dropdown')">Advanced Maths</button>
+            <div id="advanced-maths-dropdown" class="dropdown-content">
+                <a href="#trigonometry">Trigonometry</a>
+                <a href="#statistics">Statistics</a>
+                <a href="#matrices">Matrices</a>
+            </div>
+        </div>
+    </section>
+<section id="about" style="text-align: center;">
+    <h2>About</h2>
+    <p>We are a two-person team providing free study notes for students in classes 9 to 12. Our goal is to make learning easier by offering clear and organized materials to help you understand your subjects better. Whether you're preparing for exams or revising lessons, our notes are here to help. We believe education should be accessible to everyone, and we're happy to support your academic journey.</p>
+</section>
+<section id="contact" style="text-align: center;">
+    <h2>Contact</h2>
+    <p>Have questions? Get in touch with us via email or phone. We're here to help!</p>
+    <p>jun3d90@gmail.com</p>
+    <p>+91 84040 59436</p>
+</section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jick's Study Notes. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+
+            // Check if the dropdown is already open
+            if (dropdown.style.maxHeight && dropdown.style.maxHeight !== "0px") {
+                dropdown.style.maxHeight = "0px"; // Close the dropdown
+            } else {
+                dropdown.style.maxHeight = dropdown.scrollHeight + "px"; // Open the dropdown
+            }
+        }
+    </script>
+</body>
+</html>
