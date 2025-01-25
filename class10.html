@@ -5,27 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elegant Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <div style="display: flex; align-items: center;">
-                <img src="https://i.imgur.com/w49mLyC.png" style="height: 40px; margin-right: 10px;"> <!-- Logo -->
-                <h2 style="margin: 0;">Jick's</h2>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center;">
+                    <img src="https://i.imgur.com/w49mLyC.png" style="height: 40px; margin-right: 10px;">
+                    <h2 style="margin: 0;">Jick's</h2>
+                </div>
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
-    <nav>
+    <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
+      
+    
     <section>
         <h2 style="text-align: center;">Subjects</h2>
 
         <!-- Math Section -->
         <div class="dropdown">
-            <button onclick="toggleDropdown('math-dropdown')" style="width: 100px;">Math</button>
+            <button onclick="toggleDropdown('math-dropdown')" style="width: 125px;">Math</button>
             <div id="math-dropdown" class="dropdown-content">
                 <a href="https://mynotesassamclass10.netlify.app/mathsch1" target="_blank">1. Real Numbers</a>
                 <a href="https://mynotesassamclass10.netlify.app/mathsch2" target="_blank">2. Polynomials</a>
@@ -47,7 +55,7 @@
 
         <!-- Science Section -->
         <div class="dropdown">
-            <button onclick="toggleDropdown('science-dropdown')" style="width: 100px;">Science</button>
+            <button onclick="toggleDropdown('science-dropdown')" style="width: 125px;">Science</button>
             <div id="science-dropdown" class="dropdown-content">
                 <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">1. Chemical Reactions and Equations</a>
                 <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">2. Acids, Bases and Salts</a>
@@ -70,7 +78,7 @@
 
         <!-- English Section -->
         <div class="dropdown">
-            <button onclick="toggleDropdown('english-dropdown')" style="width: 100px;">English</button>
+            <button onclick="toggleDropdown('english-dropdown')" style="width: 125px;">English</button>
             <div id="english-dropdown" class="dropdown-content">
                 <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">1. Literature</a>
                 <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">2. Grammar</a>
@@ -80,7 +88,7 @@
 
         <!-- Hindi Section -->
         <div class="dropdown">
-            <button onclick="toggleDropdown('hindi-dropdown')" style="width: 100px;">Hindi</button>
+            <button onclick="toggleDropdown('hindi-dropdown')" style="width: 125px;">Hindi</button>
             <div id="hindi-dropdown" class="dropdown-content">
                 <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">1. Literature</a>
                 <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">2. Grammar</a>
@@ -90,7 +98,7 @@
 
         <!-- Assamese Section -->
         <div class="dropdown">
-            <button onclick="toggleDropdown('assamese-dropdown')" style="width: 100px;">Assamese</button>
+            <button onclick="toggleDropdown('assamese-dropdown')" style="width: 125px;">Assamese</button>
             <div id="assamese-dropdown" class="dropdown-content">
                 <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">1. Literature</a>
                 <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">2. Grammar</a>
@@ -114,10 +122,15 @@
     </div>
     </section>
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Jick's Study Notes. All rights reserved.</p>
+        <div class="footer-container">
+            <p>Toggle Theme</p>
+            <!-- Light mode image -->
+            <img src="https://i.imgur.com/T63hEhS.png" alt="Light Mode Icon" id="lightModeIcon" class="mode-icon" />
+            <!-- Dark mode image -->
+            <img src="https://i.imgur.com/ssNVywc.png" alt="Dark Mode Icon" id="darkModeIcon" class="mode-icon" />
         </div>
     </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
